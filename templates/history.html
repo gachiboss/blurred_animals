@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title_name %}
+Все события
+{% endblock %}
+
+
+
+{% block download %}
+    <h1 text-align="center">Все события</h1>
+    <table>
+        <thead>
+            <td>ID</td>
+            <td>Тип животного</td>
+            <td>Имя файла</td>
+            <td>Время создания</td>
+            <td>Просмотр</td>
+        </thead>
+{% for items in event %}
+        <tbody>
+             <tr>
+                <td>{{items.ID}}</td>
+                <td>{{items.animal_type}}</td>
+                <td>{{items.processed_image}}</td>
+                <td>{{items.created}}</td>
+                <td><a href="/history/static/{{items.processed_image[:-5:]}}">Посмотреть</a></td>
+            </tr>
+        </tbody>
+{% endfor %}
+    </table>
+{% endblock %}

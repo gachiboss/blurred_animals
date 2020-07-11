@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title_name %}
+Получи лисичку
+{% endblock %}
+
+
+
+{% block download %}
+    <div class="download">
+      <h3 align="center"><a download="" href="/static/downloads/{{uuid}}">Скачать</a></h3>
+    <img align="center" src="/static/downloads/{{uuid}}">
+    </div>
+{% endblock %}

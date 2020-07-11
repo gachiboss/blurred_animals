@@ -1,0 +1,184 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    letter-spacing: none;
+    display: flex;
+}
+
+a{
+    color: #000 !important;
+    text-decoration: none;
+}
+
+header{
+    background: #f6f6f6;
+    padding: 22px 0;
+}
+
+.header-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-container a{
+    color: #000;
+    font-size: 16px;
+    margin-right: 63px;
+    padding: 27px 6px;
+}
+
+.header-container a:hover{
+    background: yellow;
+}
+
+#menu-checkbox{
+    display: none;
+}
+
+ul{
+    display: flex;
+}
+
+nav{
+    margin-top: 20px;
+}
+
+.top-slide img{
+  width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.download{
+    margin-top: 35px;
+}
+
+.download img{
+   width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.top-slide{
+    background: url(http://127.0.0.1:5000/static/img/doge.jpg) no-repeat;
+    background-size: 100%;
+    background-position: center;
+    min-height: 100%;
+    padding-top: 120px;
+    padding-bottom: 300px;
+}
+
+.top-container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.top-slide h2{
+    background: yellow;
+    display: inline;
+    font-size: 70px;
+    padding: 0 13px;
+}
+
+
+.top-slide p{
+    background: #414146;
+    display: inline;
+    font-size: 28px;
+    color: white;
+}
+
+
+
+
+@media screen and (max-width: 420px){
+    .header-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .main-menu{
+        display: none;
+    }
+    .main-menu li{
+        width: 100%;
+        display: block;
+        font-size: 12px;
+    }
+    .main-menu a{
+        display: block;
+        padding: 8px;
+    }
+    .toggle-button{
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        color: #000;
+        margin-top: 20px;
+    }
+    .toggle-button:after{
+        content: attr(data-open);
+        display: block;
+    }
+    #menu-checkbox:checked + nav[role="navigation"] .main-menu{
+        display: block;
+    }
+    #menu-checkbox:checked + nav[role="navigation"] .toggle-button{
+        content: attr(data-close);
+    }
+    .header-container a{
+        margin-right: -65px;
+    }
+    .main-menu{
+        position: relative;
+        top: 30px;
+        right: 11px;
+    }
+    .top-slide {
+        background: none;
+    }
+
+    .top-slide h2{
+        font-size: 36px;
+    }
+    .top-slide p{
+        font-size: 24px;
+    }
+}
+
+table {
+    width: 100%; border-collapse: collapse;
+}
+table td {
+    padding: 12px 16px;
+}
+table thead tr {
+    font-weight: bold; border-top: 1px solid #e8e9eb;
+}
+table tr {
+    border-bottom: 1px solid #e8e9eb;
+}
+table tbody tr:hover {
+    background: #e8f6ff;
+}
+
+@media screen and (max-width: 420px) {
+  .table {
+    overflow-y: scroll;
+  }
+}
